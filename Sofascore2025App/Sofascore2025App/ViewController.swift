@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
     
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .red
         
         let viewBox = UIView()
         viewBox.backgroundColor = .green
