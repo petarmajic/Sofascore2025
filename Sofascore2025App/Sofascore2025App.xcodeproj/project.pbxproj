@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAA21D3A2D85E1160043B0F6 /* SofaAcademic in Frameworks */ = {isa = PBXBuildFile; productRef = CAA21D392D85E1160043B0F6 /* SofaAcademic */; };
 		CAB296932D7CD4B900E2D19B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CAB296922D7CD4B900E2D19B /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA21D3A2D85E1160043B0F6 /* SofaAcademic in Frameworks */,
 				CAB296932D7CD4B900E2D19B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +100,7 @@
 			name = Sofascore2025App;
 			packageProductDependencies = (
 				CAB296922D7CD4B900E2D19B /* SnapKit */,
+				CAA21D392D85E1160043B0F6 /* SofaAcademic */,
 			);
 			productName = Sofascore2025App;
 			productReference = CAB296792D7CD43000E2D19B /* Sofascore2025App.app */;
@@ -129,6 +132,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				CAB296912D7CD4B900E2D19B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CAA21D382D85E1160043B0F6 /* XCRemoteSwiftPackageReference "academy" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CAB2967A2D7CD43000E2D19B /* Products */;
@@ -172,7 +176,7 @@
 				INFOPLIST_FILE = Sofascore2025App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -199,7 +203,7 @@
 				INFOPLIST_FILE = Sofascore2025App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +362,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CAA21D382D85E1160043B0F6 /* XCRemoteSwiftPackageReference "academy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sofascore/academy";
+			requirement = {
+				branch = hw2;
+				kind = branch;
+			};
+		};
 		CAB296912D7CD4B900E2D19B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -369,6 +381,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CAA21D392D85E1160043B0F6 /* SofaAcademic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAA21D382D85E1160043B0F6 /* XCRemoteSwiftPackageReference "academy" */;
+			productName = SofaAcademic;
+		};
 		CAB296922D7CD4B900E2D19B /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CAB296912D7CD4B900E2D19B /* XCRemoteSwiftPackageReference "SnapKit" */;
