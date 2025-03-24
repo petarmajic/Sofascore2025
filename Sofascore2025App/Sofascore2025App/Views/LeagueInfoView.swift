@@ -27,26 +27,28 @@ class LeagueInfoView: BaseView {
     }
 
     override func styleViews() {
-        countryLabel.font = UIFont(name: "Roboto-Bold", size: 14)
+        countryLabel.font = .robotoBold
         countryLabel.textAlignment = .left
         countryLabel.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 1.00)
         
-        leagueLabel.font = UIFont(name: "Roboto-Bold", size: 14)
+        leagueLabel.font = .robotoBold
         leagueLabel.textAlignment = .left
         leagueLabel.textColor = UIColor(red: 0.07, green: 0.07, blue: 0.07, alpha: 0.4)
+        
+        arrowImageView.image = UIImage(named: "ic_pointer_right")
     }
 
     override func setupConstraints() {
         logoImageView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(12)
-            $0.leading.equalToSuperview().offset(16)
+            $0.top.bottom.equalToSuperview().inset(12)
+            $0.leading.equalToSuperview().inset(16)
             $0.width.height.equalTo(32)
         }
         
         containerView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(16)
-            $0.leading.equalToSuperview().offset(80)
-            $0.width.equalTo(165)
+            $0.top.equalToSuperview().inset(16)
+            $0.leading.equalTo(logoImageView.snp.trailing).offset(32)
+            $0.trailing.equalToSuperview().inset(-16)
             $0.height.equalTo(24)
         }
 
@@ -68,11 +70,15 @@ class LeagueInfoView: BaseView {
         }
     }
 
-    func configure(with league: League) {
-        countryLabel.text = league.country?.name
-        leagueLabel.text = league.name
-        
-        arrowImageView.image = UIImage(named: "ic_pointer_right")
-        logoImageView.image = UIImage(named: "Image")
+    func setCountryName(_ name: String?) {
+        self.countryLabel.text = name
+    }
+
+    func setLeagueName(_ name: String) {
+        self.leagueLabel.text = name
+    }
+
+    func setLogoImage(_ imageName: String) {
+        self.logoImageView.image = UIImage(named: imageName)
     }
 }
